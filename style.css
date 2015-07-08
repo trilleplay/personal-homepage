@@ -8,7 +8,7 @@ html {
 body {
 	width:100%;
 	height:100%;
-	background:white;
+	background:#fafafa;
 	color:white;
 	padding:0px;
 	font-family:'Quicksand', sans-serif;
@@ -80,8 +80,12 @@ li.google {
 	background:#dd4b39;
 }
 
-li.wordpress {
-	background:#1e8cbe;
+li.medium {
+	background:#ffffff;
+}
+
+li.medium i {
+	color:#000000;
 }
 
 li.facebook {
