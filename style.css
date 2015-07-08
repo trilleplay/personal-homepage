@@ -1,0 +1,143 @@
+html {
+	width:100%;
+	height:100%;
+	padding:0px;
+	margin:0px;
+}
+
+body {
+	width:100%;
+	height:100%;
+	background:white;
+	color:white;
+	padding:0px;
+	font-family:'Quicksand', sans-serif;
+	margin:0px;
+	font-size:16px;
+}
+
+header {
+	width:100%;
+	padding:0px;
+	margin:0px;
+}
+
+header {
+	padding:0px;
+	text-align:center;
+	padding-top:10%;
+	color:gray;
+}
+
+header > h1 {
+	margin:10px;
+	color:dimgray;
+	text-transform:uppercase;
+	font-weight:lighter;
+	font-size:5em;
+}
+
+.icon-list {
+	list-style:none;
+	margin:0 auto;
+	display:block;
+	margin-top:25px;
+	text-align:center;
+	padding:0px;
+}
+
+.icon-list > li {
+	display:inline-block;
+	border-radius:100px;
+	width:50px;
+	height:50px;
+	-webkit-border-radius:100px;
+	overflow:hidden;
+	cursor:pointer;
+    transition: opacity .25s;
+   -moz-transition: opacity .25s;
+   -webkit-transition: opacity .25s;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+	opacity:0.85;
+	-moz-opacity:0.85;
+	-khtml-opacity:0.85;
+}
+
+li.github {
+	background:#666;
+}
+
+li.twitter {
+	background:#55acee;
+}
+
+li.linkedin {
+	background:#0976b4;
+}
+
+li.google {
+	background:#dd4b39;
+}
+
+li.wordpress {
+	background:#1e8cbe;
+}
+
+li.facebook {
+	background:#3b5998;
+}
+
+li.behance {
+	background:#1769ff;
+}
+
+.icon-list li > a,
+.icon-list li > a:visited,
+.icon-list li > a:active
+{
+	color:white;
+}
+
+.icon-list li:hover {
+	opacity:1;
+	-khtml-opacity:1;
+	-moz-opacity:1;
+}
+
+.icon-list > li i {
+	font-size:1.75em;
+	padding-top:0.45em;
+}
+
+.links {
+	color:#989898;
+	text-align:center;
+	list-style:none;
+	padding:0px;
+	font-size:0.85em;
+	padding-top:5px;
+}
+
+.links a {
+	color:#989898;
+	text-decoration:none;
+	transition: color .25s;
+   -moz-transition: color .25s;
+   -webkit-transition: color .25s;
+}
+
+.links a:hover {
+	color:#565656;
+	text-decoration:none;
+}
+
+footer {
+	color:lightgray;
+	text-align:center;
+	position:absolute;
+	bottom:10px;
+	width:100%;
+	font-style:italic;
+}
+}
