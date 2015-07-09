@@ -8,7 +8,7 @@ html {
 body {
 	width:100%;
 	height:100%;
-	background:#fafafa;
+	background:white;
 	color:white;
 	padding:0px;
 	font-family:'Quicksand', sans-serif;
@@ -65,7 +65,7 @@ header > h1 {
 }
 
 li.github {
-	background:#666;
+	background:#666666;
 }
 
 li.twitter {
@@ -81,11 +81,11 @@ li.google {
 }
 
 li.medium {
-	background:#ffffff;
+	background:#333333;
 }
 
 li.medium i {
-	color:#000000;
+	color:white;
 }
 
 li.facebook {
