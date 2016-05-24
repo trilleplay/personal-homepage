@@ -20,9 +20,6 @@ header {
 	width:100%;
 	padding:0px;
 	margin:0px;
-}
-
-header {
 	padding:0px;
 	text-align:center;
 	padding-top:10%;
@@ -48,7 +45,7 @@ header > h2 {
 	list-style:none;
 	margin:0 auto;
 	display:block;
-	margin-top:25px;
+	margin-top:40px;
 	text-align:center;
 	padding:0px;
 	width: 260px;
