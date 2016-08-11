@@ -2,47 +2,69 @@
 <html>
 
 <head>
-	<title>Hi. I am Tyler.</title>
+	<title>Welcome to Me.</title>
 
 	<link rel="icon" type="image/png" href="favicon.png">
 
-	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
 
+	<link rel="stylesheet" href="dialog.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/2.3.4/css/vex.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/2.3.4/css/vex-theme-flat-attack.min.css" type="text/css" media="screen" />
 </head>
 
 <body>
-	<header>
-		<h1 id="title">Tyler Nickerson</h1>
-		<h2 id="subtitle">Designer &bull; Developer &bull; Filmmaker</h2>
-	</header>
-	<ul class="icon-list">
-		<li class="facebook"><a target="_blank" href="https://facebook.com/nickerson.tyler"><i class="fa fa-facebook"></i></a></li>
-		<li class="twitter"><a target="_blank" href="https://twitter.com/tylernickerson"><i class="fa fa-twitter"></i></a></li>
-		<li class="google"><a target="_blank" href="https://plus.google.com/+TylerNickersonInTheFlesh"><i class="fa fa-google-plus"></i></a></li>
-		<li class="linkedin"><a target="_blank" href="https://www.linkedin.com/in/tylernickerson"><i class="fa fa-linkedin"></i></a></li>
-		<li class="medium"><a target="_blank" href="https://medium.com/@TylerNickerson"><i class="fa fa-medium"></i></a></li>
-		<li class="github"><a target="_blank" href="https://github.com/Nickersoft"><i class="fa fa-github"></i></a></li>
-		<li class="behance"><a target="_blank" href="https://www.behance.net/TJNickerson"><i class="fa fa-behance"></i></a></li>
-		<li class="dribbble"><a target="_blank" href="https://www.dribbble.com/TylerNickerson"><i class="fa fa-dribbble"></i></a></li>
-	</ul>
-	<ul class="links">
-		<li>Videos and more at <a target="_blank" href="http://radxpictures.com/">http://radxpictures.com/</a></li>
-	</ul>
+	<main>
+		<header>
+			<h1 id="title"><span>Tyler</span>Nickerson</h1>
+			<ul id="menu" class="menu">
+				<li><a href="https://dribbble.com/tylernickerson" target="_blank">Designer</a></li>
+				<li><a href="https://github.com/Nickersoft" target="_blank">Developer</a></li>
+				<li><a href="http://radxpictures.com" target="_blank">Filmmaker</a></li>
+			</ul>
+		</header>
+		<ul class="icon-list">
+			<li class="facebook"><a target="_blank" href="https://facebook.com/nickerson.tyler"><i class="fa fa-facebook"></i></a></li>
+			<li class="twitter"><a target="_blank" href="https://twitter.com/tylernickerson"><i class="fa fa-twitter"></i></a></li>
+			<li class="medium"><a target="_blank" href="https://medium.com/@TylerNickerson"><i class="fa fa-medium"></i></a></li>
+			<li class="linkedin"><a target="_blank" href="https://www.linkedin.com/in/tylernickerson"><i class="fa fa-linkedin"></i></a></li>
+			<li class="email"><a target="_blank" href="mailto:tyler@tylernickerson.com"><i class="fa fa-envelope-o"></i></a></li>
+		</ul>
+		<footer id="footer">
+			This site was built from scratch by yours truly <span class="heart">&hearts;</span>
+		</footer>
+	</main>
 	<div id="particles-js" class="background"></div>
+
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vex-js/2.3.4/js/vex.combined.min.js"></script>
 	<script>
 		$(document).ready(function() {
-			$("#subtitle").css("opacity", 0);
+			var current_delay = 500;
 			$("#title").css("opacity", 0).animate({
 				opacity: 1
 			}, 1000);
-			$("#subtitle").delay(500).animate({
+			$("#menu").css("opacity", 0).delay(current_delay).animate({
 				opacity: 1
 			}, 1000);
-
+			$(".icon-list li").delay(current_delay).each(function () {
+				current_delay += 100;
+				console.log(current_delay);
+				$(this).css({
+					opacity: 0,
+					top: "-20px"
+				}).delay(current_delay).animate({
+					opacity: 1,
+					top: 0
+				}, 100);
+			});
+			current_delay += 600;
+			$("#footer").delay(current_delay).css("opacity", 0).animate({
+				opacity: 1
+			}, 1000);
 			particlesJS.load('particles-js', 'particles.json', function() {
 				console.log('callback - particles-js config loaded');
 			});
